@@ -1,0 +1,722 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 10;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll to Top Button Styles */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 4px;
+  right: 4px;
+  z-index: 99;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  /* Hidden by default */
+}
+
+#scrollTopBtn img {
+  width: 52px;
+  /* Adjust size as needed */
+  height: 52px;
+  border-radius: 50%;
+}
+
+#scrollTopBtn img:hover {
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+  transition: transform 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.bold-line {
+  border: 0;
+  height: 0px; /* Adjust thickness */
+  background-color: #000; /* Change color to your preference */
+  margin: 5px 0;
+}
+
+nav {
+  width: 100%;
+  height: 10%
+  position : fixed;
+  top: 0;
+  left: 0;
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 99;
+}
+
+/* Set the background image for the whole page */
+.section {
+  background-image: url('background.jpg');
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+}
+
+/* If you want to set the background image for a specific section */
+.section {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; /* Full viewport height */
+}
+
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(73, 32, 32, 0.07);
+    /* Initial transparent background */
+    padding: 10px 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Darker background when scrolled */
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+.navbar ul li a:hover {
+    color: #FFBC42;
+    /* Highlight color on hover */
+}
+
+.typing-animation {
+  font-size: 30px;
+  margin-top: 20px;
+  animation: typing 4s steps(22) infinite, blink 0.5s step-end infinite;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: 2px;
+  font-weight: bolder;
+}
+
+.section-separator {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg,  rgb(160, 112, 112), rgb(175, 104, 247) ,rgba(255, 0, 128, 0.7));
+  background-size: 200% 100%;
+  animation: gradientAnimation 5s linear infinite alternate-reverse;
+}
+
+
+
+@keyframes typing {
+
+    0%,
+    100% {
+        width: 0;
+    }
+
+    50% {
+        width: 30ch;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+
+    to {
+        border-color: white;
+    }
+}
+
+.Hireme{
+  text-align: center;
+  padding:20px;
+  padding-left: 20px;
+}
+.Hireme-btn {
+  margin-top: 140px;
+  padding: 10px 20px;
+  padding-left:20px ;
+  font-size: 15px;
+  position: absolute;
+  color: #fff;
+  background-color: #9d4edd;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: system-ui;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.Hireme-btn:hover {
+    background-color: #9d4edd;
+    transform: scale(1.1);
+}
+
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.section {
+  background-color:#E7D9F1 ;
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  gap: 2rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+  width: min(25rem, 80%);
+  border-radius: 100%;
+}
+
+@media (width < 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+}
+h2{
+  color:#9333ea;
+  font-size: medium;
+  text-align: center;
+}
+
+.about-me {
+  background: rgb(236, 231, 231);
+  padding: 20px;
+  font-family:  'Montserrat', sans-serif;
+}
+
+.about-me h1{
+  color:#9d4edd;
+
+}
+
+.about-me-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  /* Ensure children stretch to the same height */
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education {
+  font-family:  'Montserrat', sans-serif;
+  background-color: rgb(236, 231, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.education-section {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #101111;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.education-card:hover {
+  transform: scale(1.05);
+  background-color:  #d1e7e0;
+}
+
+.education-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font: 1em sans-serif;
+}
+
+.education-card {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+}
+
+.education-card btech{
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+}
+
+h2 {
+  font-size: 1.4em;
+  color: #2f76c2;
+  margin-bottom: 10px;
+}
+
+.education-item {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.skills {
+  font-family: "Poppins", Arial, sans-serif;;
+  background-color: rgb(236, 231, 231); /* Set background to white */
+  color: #000; /* Set text color to black */
+  margin: 10;
+  display: flex;
+  justify-content: center;
+  align-items: normal;
+}
+
+.skills-container {
+  width: 500px;
+  background-color: white; /* Optional light background for the skill container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for some depth */
+  text-align: center; /* Center text horizontally */
+  padding-left: 0%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.skills-border{
+   align-items: center;
+   padding-top: 20px;
+   padding-left: 18%;
+   width: 1000px;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress {
+  background-color: #ffaa00;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.Projects{
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  padding-left: 5%;
+}
+
+.projects-container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color:#0e0e0f;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color:black;
+}
+
+.projects-grid {
+  padding-left: 10%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 1200px;
+}
+}
+
+.project-card {
+  background-color: #eae6e6;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  margin-right: 10px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin: 10px;
+  color: #bbb;
+}
+
+.certifications{
+  font-family:  'Montserrat', sans-serif;
+  background-color: #d1e7e0;
+  font-family: bold;
+  padding: 40px;
+}
+
+.title {
+  text-align: center;
+  color: black;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 15px;
+  justify-items: center;
+}
+
+.certificate {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.certificate img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.resume{
+  padding:40px;
+  align-items: center;
+  margin-left: 610px;
+  background-color: white;
+}
+
+.resume h1{
+  padding:0px;
+  text-align: center;
+  margin-left: -80%;
+  color: #101111;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 15px;
+  position: absolute;
+  background-color: #9d4edd;
+  color:white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: system-ui;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #9d4edd;
+    transform: scale(1.1);
+}
+
+.h4{
+  align-items: center;
+}
+.a{
+  background-color: #9d4edd;
+  align-items: center;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 50px;
+  background-color: white;
+}
+
+h2 {
+  color: rgb(58, 111, 226); /* similar greenish color */
+  font-weight: bold;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* spacing between icons */
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  gap:20%;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #222831;
+  color: #EEEEEE;
+  padding: 10px 10%;
+  /* Reduced padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: slideUp 1s ease-in-out;
+}
+
+.footer-content {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  margin: 5px;
+  color:white;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  font-size: 14px;
+  /* Smaller font size */
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 15px;
+  /* Smaller font size */
+}
+
