@@ -9,7 +9,7 @@
   --extra-light: #faf5ff;
   --max-width: 1200px;
 }
-
+@media screen and (min-width: 600px) {
 * {
   padding: 10;
   margin: 0;
@@ -719,4 +719,4 @@ footer {
   font-size: 15px;
   /* Smaller font size */
 }
-
+}
