@@ -9,7 +9,7 @@
   --extra-light: #faf5ff;
   --max-width: 1200px;
 }
-@media screen and (max-width: 768px) {
+
 * {
   padding: 10;
   margin: 0;
@@ -40,12 +40,6 @@ html {
   /* Adjust size as needed */
   height: 52px;
   border-radius: 50%;
-}
-
-#scrollTopBtn img:hover {
-  transform: scale(1.1);
-  /* Slight zoom effect on hover */
-  transition: transform 0.2s ease;
 }
 
 a {
@@ -314,7 +308,7 @@ ul li a:hover {
   border-radius: 100%;
 }
 
-@media (width < 750px) {
+@media (min-width :600px) {
   nav .checkbox {
     display: block;
   }
