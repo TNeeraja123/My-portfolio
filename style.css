@@ -42,6 +42,12 @@ html {
   border-radius: 50%;
 }
 
+#scrollTopBtn img:hover {
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+  transition: transform 0.2s ease;
+}
+
 a {
   text-decoration: none;
 }
@@ -308,7 +314,7 @@ ul li a:hover {
   border-radius: 100%;
 }
 
-@media (width< 786px) {
+@media (width < 750px) {
   nav .checkbox {
     display: block;
   }
@@ -713,4 +719,4 @@ footer {
   font-size: 15px;
   /* Smaller font size */
 }
-}
+
