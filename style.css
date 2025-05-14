@@ -9,7 +9,7 @@
   --extra-light: #faf5ff;
   --max-width: 1200px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 768px) {
 * {
   padding: 10;
   margin: 0;
